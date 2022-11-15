@@ -29,7 +29,8 @@ namespace WebApiC.Controllers
 
             Activity.Current?.AddTag("WeatherForecast Id", "20021988");
 
-            _logger.LogInformation("TraceId:{TraceId}, SpanId:{SpanId}, ParentSpanId:{ParentSpanId}", traceId, spanId, parentSpanId);
+            // _logger.LogInformation("TraceId:{TraceId}, SpanId:{SpanId}, ParentSpanId:{ParentSpanId}", traceId, spanId, parentSpanId);
+            _logger.LogInformation("The GetWeatherForecast is calling!(WebApiC)");
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

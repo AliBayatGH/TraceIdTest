@@ -30,7 +30,8 @@ namespace WebApiA.Controllers
 
             Activity.Current?.AddTag("WeatherForecast Id", "20021988");
 
-            _logger.LogInformation("TraceId:{TraceId}, SpanId:{SpanId}, ParentSpanId:{ParentSpanId}",traceId,spanId,parentSpanId);
+            // _logger.LogInformation("TraceId:{TraceId}, SpanId:{SpanId}, ParentSpanId:{ParentSpanId}", traceId, spanId, parentSpanId);
+            _logger.LogInformation("The GetWeatherForecast is calling!(WebApiA)");
 
             var result = await client.GetStringAsync("https://localhost:7148/WeatherForecast");
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast

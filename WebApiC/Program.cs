@@ -1,6 +1,8 @@
+using Hasti.Framework.Endpoints.Logging.Extensions;
 using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.ConfigureLogging();
 
 // Add services to the container.
 var defaulttrace = Activity.DefaultIdFormat;

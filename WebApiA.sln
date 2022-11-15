@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiA", "WebApiA\WebApiA.csproj", "{F86F1900-5849-4B86-BECD-6476D4720FEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiA", "WebApiA\WebApiA.csproj", "{F86F1900-5849-4B86-BECD-6476D4720FEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiB", "WebApiB\WebApiB.csproj", "{539C0538-B223-430A-AFB9-03FDEC87292B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiB", "WebApiB\WebApiB.csproj", "{539C0538-B223-430A-AFB9-03FDEC87292B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiC", "WebApiC\WebApiC.csproj", "{4250BE96-C4BF-48B9-9540-5808164B5CE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiC", "WebApiC\WebApiC.csproj", "{4250BE96-C4BF-48B9-9540-5808164B5CE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.csproj", "{CF4FB75D-877E-4AFB-94CC-1CFCAADF4BA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{4250BE96-C4BF-48B9-9540-5808164B5CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4250BE96-C4BF-48B9-9540-5808164B5CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4250BE96-C4BF-48B9-9540-5808164B5CE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF4FB75D-877E-4AFB-94CC-1CFCAADF4BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF4FB75D-877E-4AFB-94CC-1CFCAADF4BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF4FB75D-877E-4AFB-94CC-1CFCAADF4BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF4FB75D-877E-4AFB-94CC-1CFCAADF4BA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

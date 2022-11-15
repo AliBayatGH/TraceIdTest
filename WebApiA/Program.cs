@@ -1,4 +1,7 @@
+using Hasti.Framework.Endpoints.Logging.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.ConfigureLogging();
 
 // Add services to the container.
 
