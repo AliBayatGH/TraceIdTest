@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
+using WebApiA.Services;
 
 namespace WebApiA.Controllers
 {
@@ -12,11 +13,12 @@ namespace WebApiA.Controllers
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
-
+        private readonly IMyService _myService;
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(IMyService myService, ILogger<WeatherForecastController> logger)
         {
+            _myService = myService;
             _logger = logger;
         }
 
@@ -33,7 +35,7 @@ namespace WebApiA.Controllers
             // _logger.LogInformation("TraceId:{TraceId}, SpanId:{SpanId}, ParentSpanId:{ParentSpanId}", traceId, spanId, parentSpanId);
             _logger.LogInformation("The GetWeatherForecast is calling!(WebApiA)");
 
-            var result = await client.GetStringAsync("https://localhost:7148/WeatherForecast");
+            var result =await _myService.GetAsync();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
