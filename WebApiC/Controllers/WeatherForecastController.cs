@@ -25,7 +25,12 @@ namespace WebApiC.Controllers
             var client = new HttpClient();
             var traceId = Activity.Current.TraceId;
             var spanId = Activity.Current.SpanId;
-            var ParentId = Activity.Current.ParentSpanId;
+            var parentSpanId = Activity.Current.ParentSpanId;
+
+            Activity.Current?.AddTag("WeatherForecast Id", "20021988");
+
+            _logger.LogInformation("TraceId:{TraceId}, SpanId:{SpanId}, ParentSpanId:{ParentSpanId}", traceId, spanId, parentSpanId);
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
