@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  webapia:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings_ElasticConnectionString=http://elasticsearch:9200
+    ports:
+      - "80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+  webapib:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings_ElasticConnectionString=http://elasticsearch:9200
+    ports:
+      - "80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+  webapic:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings_ElasticConnectionString=http://elasticsearch:9200
+    ports:
+      - "80"
+
